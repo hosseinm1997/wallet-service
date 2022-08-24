@@ -81,7 +81,7 @@ This service is standing between user and `credit service` as a proxy. It charge
 - **description**: This endpoint request for user and transactions to the database. If no transaction found, it stores user and
 his transaction with status: `requested`, then make request to the `credit service` and after getting an log id make the status: `successful` and
 charge user balance. If error occures between microservices, circuit pattern state will be changed to open. 
-With a specific interval it will be change to half-open state. Circuite breaker implemented via **Proxy pattern** over main service.
+With a specific interval it will be change to half-open state. **`Circuite breaker`** implemented via **`Proxy pattern`** over main service.
 
 
 ### - Balance API:
